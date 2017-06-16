@@ -26,12 +26,14 @@ button {
 
 #track:hover, #setup:hover, #submit:hover {
 	border-bottom: 2px solid #89CFFF;
-
-}
-
-a:hover, #submit:hover {
 	color: #89CFFF !important;
 }
+
+
+#home {
+	color: #FF7C6D;;
+}
+
 
 #main-header{
 	background-color: transparent;
