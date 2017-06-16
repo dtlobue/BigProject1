@@ -21,7 +21,7 @@ function gps_distance(lat1, lon1, lat2, lon2) {
 
 
 //***Event listener for the device (NO INTERNET)***//
-document.addEventListener("deviceready", function()) {   //Syntax:document.addEventListener(event, function, useCapture)
+document.addEventListener("deviceready", function() {   //Syntax:document.addEventListener(event, function, useCapture)
 
     if (navigation.network.connection.type == Connection.NONE) {
       $("#track").text("No Internet Access");
@@ -33,9 +33,12 @@ document.addEventListener("deviceready", function()) {   //Syntax:document.addEv
       $("#setup").button("refresh");
 
     }
-    
+
   });
 
+var dogName="" //Dog Name
+var dogGeoId= null; //Geolocation of the dog
+var tracking_data = []; //Hold all the GPS Locations within the array
 
 
-}
+//***Start Tracking Event of the Dog***//
