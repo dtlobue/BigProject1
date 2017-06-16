@@ -42,3 +42,22 @@ var tracking_data = []; //Hold all the GPS Locations within the array
 
 
 //***Start Tracking Event of the Dog***//
+$("#submit, #track").live("click", function() {
+
+  //Start tracking the dog
+  dogGeoId = navigator.geolocation.watchPosition (
+
+    //Success
+    function success () {
+      
+    }
+
+    //Error
+    function error () {
+
+    }
+
+
+  )
+
+}
