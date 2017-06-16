@@ -58,7 +58,9 @@ $("#submit, #track").live("click", function() {
     },
 
     //Settings
-    
+    { frequency: 3000, enableHighAccuracy: true });
+
+  //User Interface 
 
 
   )
