@@ -4,7 +4,7 @@
 
 
 body {
-	background-image: url("../images/sunsetdog.jpg");
+	background-image: url("../images/dogbg.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
@@ -13,9 +13,9 @@ body {
 	image-rendering: -webkit-optimize-contrast;	
 }
 
-#track, #setup {
+#track, #setup, #submit {
 	border-radius:15px;
-	background-color: #FF5845;
+	background-color: #FF7C6D;
 	border: none;
 	font-size: 2rem;
 }
@@ -24,19 +24,21 @@ button {
 	font-family: 'Amatic SC', cursive;
 }
 
-#track:hover, #setup:hover {
-	color: #89CFFF;
+#track:hover, #setup:hover, #submit:hover {
 	border-bottom: 2px solid #89CFFF;
+
 }
 
-a:hover {
-
+a:hover, #submit:hover {
+	color: #89CFFF !important;
 }
 
 #main-header{
 	background-color: transparent;
 	font-size: 8rem;
 	font-weight: bold;
+	color: #FF7C6D !important;
 }
+
 
 
