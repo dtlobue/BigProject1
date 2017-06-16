@@ -1,0 +1,36 @@
+* {
+	font-family: 'Amatic SC', cursive;
+}
+
+body {
+	background-image: url("../images/sunsetdog.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 640px;
+	image-rendering: -webkit-optimize-contrast;	
+}
+
+#track, #setup {
+	border-radius:15px;
+	background-color: #FF5845;
+	border: none;
+	font-size: 2rem;
+}
+
+button {
+	font-family: 'Amatic SC', cursive;
+}
+
+a:hover {
+	color: #89CFFF;
+}
+
+#main-header{
+	background-color: transparent;
+	font-size: 8rem;
+	font-weight: bold;
+}
+
+
