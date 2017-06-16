@@ -13,6 +13,10 @@ body {
 	image-rendering: -webkit-optimize-contrast;	
 }
 
+.form-control {
+	border-radius: 10px;
+}
+
 #track, #setup, #submit {
 	border-radius:15px;
 	background-color: #FF7C6D;
@@ -34,6 +38,10 @@ button {
 	color: #FF7C6D;;
 }
 
+#home:hover {
+	text-decoration: none;
+	border-bottom: .25rem solid #FF7C6D;
+}
 
 #main-header{
 	background-color: transparent;
