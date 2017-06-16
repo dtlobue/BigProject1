@@ -47,15 +47,18 @@ $("#submit, #track").live("click", function() {
   //Start tracking the dog
   dogGeoId = navigator.geolocation.watchPosition (
 
-    //Success
-    function success () {
-      
-    }
+    //Position
+    function(position) {
+      tracking_data.push(position);
+    },
 
     //Error
-    function error () {
+    function(error) {
+      console.log(error);
+    },
 
-    }
+    //Settings
+    
 
 
   )
