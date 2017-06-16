@@ -2,6 +2,7 @@
 	font-family: 'Amatic SC', cursive;
 }
 
+
 body {
 	background-image: url("../images/sunsetdog.jpg");
 	background-size: cover;
@@ -23,8 +24,13 @@ button {
 	font-family: 'Amatic SC', cursive;
 }
 
-a:hover {
+#track:hover, #setup:hover {
 	color: #89CFFF;
+	border-bottom: 2px solid #89CFFF;
+}
+
+a:hover {
+
 }
 
 #main-header{
