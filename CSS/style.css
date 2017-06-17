@@ -94,3 +94,11 @@ ul{
 #menu {
 	position: static;
 }
+
+#logo {
+	width: 2rem;
+}
+
+#logo:hover {
+	border-bottom: 1px solid black;
+}
