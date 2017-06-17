@@ -102,3 +102,8 @@ ul{
 #logo:hover {
 	border-bottom: 1px solid black;
 }
+
+footer {
+	color: lightgrey;
+}
+
