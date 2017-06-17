@@ -17,7 +17,7 @@ body {
 	border-radius: 10px;
 }
 
-#track, #setup, #submit {
+#track, #setup, #submit, #pet {
 	border-radius:15px;
 	background-color: #FF7C6D;
 	border: none;
@@ -28,27 +28,69 @@ button {
 	font-family: 'Amatic SC', cursive;
 }
 
-#track:hover, #setup:hover, #submit:hover {
+#track:hover, #setup:hover, #submit:hover, #pet:hover {
 	border-bottom: 2px solid #89CFFF;
 	color: #89CFFF !important;
 }
 
+button a:hover {
+	color: #89CFFF !important;
+	text-decoration: none;
+}
+
 
 #home {
-	color: #FF7C6D;;
+	color: rgba(0,0,0,.9);
 }
 
 #home:hover {
 	text-decoration: none;
-	border-bottom: .25rem solid #FF7C6D;
+	border-bottom: .25rem solid black;
 }
 
 #main-header{
 	background-color: transparent;
 	font-size: 8rem;
-	font-weight: bold;
-	color: #FF7C6D !important;
+	color: black !important;
 }
 
+#baxter{
+	float: left;
+	width: 6rem;
+	border-radius: 10px;
+	display: inline-block;
+}
 
+a h2 {
+	font-size: 3rem;
+	display: inline-block;
+}
 
+#arrow{
+	float: right;
+}
+
+#find-pet {
+	align-content: center;
+}
+
+#main-nav {
+	background-color: transparent;
+}
+
+#brand {
+	font-size: 5rem;
+}
+
+li a {
+	font-size: 2rem;
+	margin-right: 3rem;
+}
+
+ul{
+	margin-left: 2rem;
+}
+
+#menu {
+	position: static;
+}
