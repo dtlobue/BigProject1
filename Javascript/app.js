@@ -1,4 +1,6 @@
-
+//THINGS TO DO:
+//1) Add API key to html
+//2) Add new jquery mobile script tag to all html
 
 //***GPS for the distance***//
 function gps_distance(lat1, lon1, lat2, lon2) {
@@ -60,9 +62,50 @@ $("#submit, #track").live("click", function() {
     //Settings
     { frequency: 3000, enableHighAccuracy: true });
 
-  //User Interface
+  //Changing user interface showing we are tracking the dog
+  dogName= $("#").val(); /**Have to figure out what to put here (dog name)**/
+
+  $("#").hide();
+
+  //Tracking Status
+  $("#").html("Tracking dog: <strong>" + dogName + "</strong");/**Have to figure out what to put here (dog name)**/
+
+});
 
 
-  )
+//Stopping the Tracking
+$("#").live("click", function(){ /**figure out what ID goes here**/
 
-}
+  //Stop tracking the user
+  navigator.geolocation.clearwatch(dogGeoId);
+
+  //Save the tracking data
+  window.localStorage.setItem(dogName, JSON.stringify(tracking_data));
+
+  //Now we will reset the Dog Name and Tracking Data
+  dogGeoId = null;
+  tracking_data = []; /*empty array*/
+
+  //Change the User Interface Again
+  $("#").val(" ").show(); /**Add ID here again for tracking**/
+
+  //Area of tracking status
+  $("").html("Stopped tracking: <strong>" + dogName + "</strong>");
+
+});
+
+
+//Possibly clear the local storage
+$("#").live("click", function(){
+  window.localStorage.clear();
+
+  /* Can add a local storage button and just clear it*/
+  /* Talk this over with James */
+});
+
+
+//Maybe create history page of where the dog has gone
+
+
+
+//Create the Dog Button off the user input [THINK ABOUT THIS ONE]
