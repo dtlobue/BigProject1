@@ -107,5 +107,40 @@ $("#").live("click", function(){
 //Maybe create history page of where the dog has gone
 
 
-
 //Create the Dog Button off the user input [THINK ABOUT THIS ONE]
+
+//When the user clicks a link to view track info, set/change the dogName attribute on the tracking info page.
+$("#").live("click", function() {
+
+  $("#").attr("dogName", $(this).text());
+});
+
+
+//User views the Tracking page
+$("#").live("pageshow", function(){
+
+  //Find the ID the dog they are viewing
+  var key = $(this).attr("dogName");
+
+  //Updating the tracking of the dog
+  $("# [data-role=header] h1").text(key);
+
+  //Get all the GPS Data for tracking the dog
+  var data= window.localStorage.getItem(key);
+
+  //Turn the GPS data into a object
+  data= JSON.parse(data);
+
+  //Now calculate the total distance the dog traveled
+  total_km= 0; /**Use Kilometers**/
+
+  for (var i=0, i < data.length; i++){
+
+    if( i==(data.lenght-1)) {
+      break;
+    }
+    total_km += gps_distance(data[i].coords.latitude, data[i].coords.longitude, data[i+1].coords.latitude, data[i+1].coords.longitude);
+  }
+
+
+//Now calculate the total time to track the dog
