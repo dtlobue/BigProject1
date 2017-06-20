@@ -173,4 +173,20 @@ $("#").live("pageshow", function(){
 
   var trackingCoord = [];
 
-  
+  //Adding GPS entries to an array
+  for(var i= 0; i<data.length; i++){
+    trackingCoord.push(new google.maps.LatLng(data[i].coords.latitude, data[i].coords.longitude));
+  }
+
+  //Plot GPS as a line in Google Maps
+  var gMapsLine = new google.maps.Polyline({
+    path: trackingCoord,
+    strokeColor: "#FF0000",
+    strokeOpacity: 1.0,
+    strokeWeight: 1.5, /**Might Change**/
+  });
+
+  //Apply the Polyline to the Map
+  gMapsLine.setMap(map);
+
+});
