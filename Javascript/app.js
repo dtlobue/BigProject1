@@ -142,5 +142,35 @@ $("#").live("pageshow", function(){
     total_km += gps_distance(data[i].coords.latitude, data[i].coords.longitude, data[i+1].coords.latitude, data[i+1].coords.longitude);
   }
 
+  total_km_rounded = total_km.toFixed(2);
 
-//Now calculate the total time to track the dog
+
+  //Now calculate the total time to track the dog
+  startTime= new Date(data[0].timestamp).getTime();
+  endTime = new Date(data[data.length-1].timestamp).getTime;
+
+  totalTimeMs = endTime - startTime;
+  totalTimeS = totalTimeMs/1000;
+
+  finalTimeMin = Math.floor(totalTimeS/60);
+  finalTimeSec = totalTimeS - (finalTimeMin * 60);
+
+  //Display total distance and time in the HTML
+  $("#").html("Distance <strong> " + total_km_rounded " km </strong>" + finalTimeMin + "min </strong>");
+
+  //Setting the Initial Proximity of Long/Lat in Google Maps//
+  myLatLong = new google.maps.LatLng(data[0].coords.latitude, data[0].coords.longitude);
+
+  //Options withing Google Maps
+  var userOptions = {
+    zoom: 15;
+    center: myLatLong,
+    mapTypeId: google.maps.mapTypeId.ROADMAP
+  };
+
+  //Create the Google Map for the User and set the options
+  var map = new google.maps.Map(document.getElementById("map_canvas"), userOptions);
+
+  var trackingCoord = [];
+
+  
