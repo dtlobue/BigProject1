@@ -44,10 +44,10 @@ var tracking_data = []; //Hold all the GPS Locations within the array
 
 
 //***Start Tracking Event of the Dog***//
-$("#submit, #track").live("click", function() {
+$("#submit, #track").on("click", function() {
 
   //Start tracking the dog
-  dogGeoId = navigator.geolocation.watchPosition (
+  dogGeoId = navigator.geolocation.watchPosition(
 
     //Position
     function(position) {
@@ -74,7 +74,7 @@ $("#submit, #track").live("click", function() {
 
 
 //Stopping the Tracking
-$("#stopTracking").live("click", function(){ /**figure out what ID goes here**/
+$("#stopTracking").on("click", function(){ /**figure out what ID goes here**/
 
   //Stop tracking the user
   navigator.geolocation.clearwatch(dogGeoId);
@@ -96,7 +96,7 @@ $("#stopTracking").live("click", function(){ /**figure out what ID goes here**/
 
 
 //Possibly clear the local storage
-$("#localStorage").live("click", function(){
+$("#localStorage").on("click", function(){
   window.localStorage.clear();
 
   /* Can add a local storage button and just clear it*/
@@ -110,14 +110,14 @@ $("#localStorage").live("click", function(){
 //Create the Dog Button off the user input [THINK ABOUT THIS ONE]
 
 //When the user clicks a link to view track info, set/change the dogName attribute on the tracking info page.
-$("#track").live("click", function() {
+$("#track").on("click", function() {
 
   $("#petName").attr("dogName", $(this).text());
 });
 
 
 //User views the Tracking page
-$("#map").live("pageshow", function(){
+$("#map").on("pageshow", function(){
 
   //Find the ID the dog they are viewing
   var key = $(this).attr("dogName");
