@@ -63,18 +63,18 @@ $("#submit, #track").live("click", function() {
     { frequency: 3000, enableHighAccuracy: true });
 
   //Changing user interface showing we are tracking the dog
-  dogName= $("#").val(); /**Have to figure out what to put here (dog name)**/
+  dogName= $("#petName").val(); /**Have to figure out what to put here (dog name)**/
 
-  $("#").hide();
+  $("#petName").hide();
 
   //Tracking Status
-  $("#").html("Tracking dog: <strong>" + dogName + "</strong");/**Have to figure out what to put here (dog name)**/
+  $("#petName").html("Tracking dog: <strong>" + dogName + "</strong");/**Have to figure out what to put here (dog name)**/
 
 });
 
 
 //Stopping the Tracking
-$("#").live("click", function(){ /**figure out what ID goes here**/
+$("#stopTracking").live("click", function(){ /**figure out what ID goes here**/
 
   //Stop tracking the user
   navigator.geolocation.clearwatch(dogGeoId);
@@ -87,16 +87,16 @@ $("#").live("click", function(){ /**figure out what ID goes here**/
   tracking_data = []; /*empty array*/
 
   //Change the User Interface Again
-  $("#").val(" ").show(); /**Add ID here again for tracking**/
+  $("#petName").val(" ").show(); /**MIGHT HAVE TO CHANGE**/
 
   //Area of tracking status
-  $("").html("Stopped tracking: <strong>" + dogName + "</strong>");
+  $("#petName").html("Stopped tracking: <strong>" + dogName + "</strong>");
 
 });
 
 
 //Possibly clear the local storage
-$("#").live("click", function(){
+$("#localStorage").live("click", function(){
   window.localStorage.clear();
 
   /* Can add a local storage button and just clear it*/
@@ -110,14 +110,14 @@ $("#").live("click", function(){
 //Create the Dog Button off the user input [THINK ABOUT THIS ONE]
 
 //When the user clicks a link to view track info, set/change the dogName attribute on the tracking info page.
-$("#").live("click", function() {
+$("#track").live("click", function() {
 
-  $("#").attr("dogName", $(this).text());
+  $("#petName").attr("dogName", $(this).text());
 });
 
 
 //User views the Tracking page
-$("#").live("pageshow", function(){
+$("#map").live("pageshow", function(){
 
   //Find the ID the dog they are viewing
   var key = $(this).attr("dogName");
@@ -156,7 +156,7 @@ $("#").live("pageshow", function(){
   finalTimeSec = totalTimeS - (finalTimeMin * 60);
 
   //Display total distance and time in the HTML
-  $("#").html("Distance <strong> " + total_km_rounded " km </strong>" + finalTimeMin + "min </strong>");
+  $("#info").html("Distance <strong> " + total_km_rounded " km </strong>" + finalTimeMin + "min </strong>");
 
   //Setting the Initial Proximity of Long/Lat in Google Maps//
   myLatLong = new google.maps.LatLng(data[0].coords.latitude, data[0].coords.longitude);
