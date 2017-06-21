@@ -134,7 +134,7 @@ $("#map").live("pageshow", function(){
   //Now calculate the total distance the dog traveled
   total_km= 0; /**Use Kilometers**/
 
-  for (var i=0, i < data.length; i++){
+  for (var i=0; i < data.length; i++){
 
     if( i==(data.lenght-1)) {
       break;
@@ -156,14 +156,14 @@ $("#map").live("pageshow", function(){
   finalTimeSec = totalTimeS - (finalTimeMin * 60);
 
   //Display total distance and time in the HTML
-  $("#info").html("Distance <strong> " + total_km_rounded " km </strong>" + finalTimeMin + "min </strong>");
+  $("#info").html("Distance <strong> " + total_km_rounded + " km </strong>" + finalTimeMin + "minutes </strong>");
 
   //Setting the Initial Proximity of Long/Lat in Google Maps//
   myLatLong = new google.maps.LatLng(data[0].coords.latitude, data[0].coords.longitude);
 
   //Options withing Google Maps
   var userOptions = {
-    zoom: 15;
+    zoom: 15,
     center: myLatLong,
     mapTypeId: google.maps.mapTypeId.ROADMAP
   };
