@@ -28,6 +28,15 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+    //    console.log('navigator.geolocation works well');
+    //    function onSuccess(position) {
+     //       var newElement = document.getElementById('geolocation');
+     //       newElement.innerHTML = 'Latitude: ' + position.coords.latitude + '<br />' + 
+      //                             'Longitude: ' + position.coords.longitude + '<br />' +
+      //                             '<hr />' + newElement.innerHTML;
+     //   }
+
+
     },
 
     // Update DOM on a Received Event
