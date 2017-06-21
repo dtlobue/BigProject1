@@ -14,7 +14,9 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 
-	<script src="http://code.jquery.com/mobile/latest/jquery.mobile.js"></script>
+  <script src="wolf/www/js/jquery-3.2.1.min.js"></script>
+
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDPegvlFgcidaWQF3pes2fw9ZwNLa2BX9Y&sensor=false"></script>
 	
 </head>
 
@@ -39,20 +41,27 @@
       <li class="nav-item">
         <a class="nav-link" href="index.html">Home</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="yourPets.html">Pets<span class="sr-only">(current)</a>
+      <li class="nav-item ">
+        <a class="nav-link" href="yourPets.html">Pets</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="newPet.html">Setup</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="map.html">Map</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="map.html">Map<span class="sr-only">(current)</a>
       </li>
     </ul>
   </div>
 </nav>
 
+  <div id="petName"></div>
 
+  <div class="container" id="map"></div>
+  <div id="info"></div>
+  <!--buttons-->
+  <div class="btn-group-vertical fixed-bottom col-sm-6 mx-auto mb-3" id="menu" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-lg btn-block btn-primary mb-3" id="stopTracking"><a href="" class="text-white">Stop Tracking</a></button>
+  </div>
 
 
   <footer class="container col-sm-12 mt-5">

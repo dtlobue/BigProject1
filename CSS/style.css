@@ -17,7 +17,7 @@ body {
 	border-radius: 10px;
 }
 
-#track, #setup, #submit, #pet {
+#menu button {
 	border-radius:15px;
 	background-color: #FF7C6D;
 	border: none;
@@ -28,7 +28,7 @@ button {
 	font-family: 'Amatic SC', cursive;
 }
 
-#track:hover, #setup:hover, #submit:hover, #pet:hover {
+#track:hover, #setup:hover, #submit:hover, #pet:hover, #stopTracking:hover{
 	border-bottom: 2px solid #89CFFF;
 	color: #89CFFF !important;
 }
@@ -92,7 +92,6 @@ ul{
 }
 
 #menu {
-	position: static;
 }
 
 #logo {
@@ -107,3 +106,6 @@ footer {
 	color: lightgrey;
 }
 
+#copy {
+	
+}
