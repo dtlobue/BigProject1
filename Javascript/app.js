@@ -1,6 +1,3 @@
-//THINGS TO DO:
-//1) Add API key to html
-//2) Add new jquery mobile script tag to all html
 
 //***GPS for the distance***//
 function gps_distance(lat1, lon1, lat2, lon2) {
@@ -169,7 +166,7 @@ $("#map").on("pageshow", function(){
   };
 
   //Create the Google Map for the User and set the options
-  var map = new google.maps.Map(document.getElementById("map_canvas"), userOptions);
+  var map = new google.maps.Map(document.getElementById("map"), userOptions);
 
   var trackingCoord = [];
 
