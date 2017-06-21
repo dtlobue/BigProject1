@@ -32,17 +32,74 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <!-- link to locally downloaded Google Fonts -->
+        <link href="css/AmaticSC-Regular.ttf" rel="stylesheet">
+
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+      <!-- below put jQuery link !! -->
+        <script> src="js/jquery-3.2.1.min.js"</script>
+      <!-- below put Bootstrap link !! Note: may have to adjust href -->
+      <link rel="stylesheet" href="css/bootstrap.css">
+        <title>Wolf App</title>
     </head>
     <body>
+
+     <!-- Commenting out original HTML
         <div class="app">
-            <h1>Apache Cordova</h1>
+            <h1>Wolf</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+                <p class="event received">Device is Ready</p> -->
+                          <!-- below is test -->
+            <!--    <p class="event" id="geolocation">Your Dog is HERE!!!!</p> 
             </div>
-        </div>
+        </div> -->
+
+<!-- our HTML starts here -->
+     
+     <!--Container-->
+<div class="container-fluid col-sm-6">
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded text-white" id="main-nav">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="yourPets.html">Your Pets</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="newPet.html">Setup</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Map</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="jumbotron text-center text-white" id="main-header"><a id="home" href="index.html">WØLF</a></div>
+
+
+    <!--Buttons-->
+    <div class="btn-group-vertical fixed-bottom col-sm-12 mx-auto mb-3" id="menu" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-lg btn-block btn-primary mb-3" id="track"><a href="" class="text-white">Start Tracking</a></button>
+        <button type="button" class="btn
+        btn-lg btn-block btn-primary" id="setup"><a href="newPet.html" class="text-white">Setup New</a></button>
+    </div>
+
+
+</div>
+</div>
+
+<!-- end of our HTML -->
+
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>

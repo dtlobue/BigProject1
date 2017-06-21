@@ -16,15 +16,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-* {
+ /* Original CSS * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-}
+/* Original CSS }
 
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
+/* Original CSS    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+/* Original CSS   -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+/* Original CSS   background-color:#E4E4E4;
     background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
@@ -46,28 +46,28 @@ body {
 }
 
 /* Portrait layout (default) */
-.app {
+/* Original CSS .app {
     background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
+/* Original CSS    position:absolute;             /* position in the center of the screen */
+/* Original CSS    left:50%;
     top:50%;
     height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
+/* Original CSS   width:225px;                   /* text area width */
+/* Original CSS    text-align:center;
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+/* Original CSS    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
-}
+/* Original CSS }
 
 /* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+/* Original CSS @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
         background-position:left center;
         padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+/* Original CSS        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
                                       /* offset horizontal: half of image width and text area width */
-    }
-}
+/* Original CSS    }
+/* Original CSS }
 
 h1 {
     font-size:24px;
@@ -112,4 +112,103 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+} */
+
+/* Beginning of our CSS */
+
+* {
+    font-family: 'Amatic SC', cursive;
+}
+
+
+body {
+    background-image: url("../images/dogbg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 640px;
+    image-rendering: -webkit-optimize-contrast; 
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+#track, #setup, #submit, #pet {
+    border-radius:15px;
+    background-color: #FF7C6D;
+    border: none;
+    font-size: 2rem;
+}
+
+button {
+    font-family: 'Amatic SC', cursive;
+}
+
+#track:hover, #setup:hover, #submit:hover, #pet:hover {
+    border-bottom: 2px solid #89CFFF;
+    color: #89CFFF !important;
+}
+
+button a:hover {
+    color: #89CFFF !important;
+    text-decoration: none;
+}
+
+
+#home {
+    color: rgba(0,0,0,.9);
+}
+
+#home:hover {
+    text-decoration: none;
+    border-bottom: .25rem solid black;
+}
+
+#main-header{
+    background-color: transparent;
+    font-size: 8rem;
+    color: black !important;
+}
+
+#baxter{
+    float: left;
+    width: 6rem;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+a h2 {
+    font-size: 3rem;
+    display: inline-block;
+}
+
+#arrow{
+    float: right;
+}
+
+#find-pet {
+    align-content: center;
+}
+
+#main-nav {
+    background-color: transparent;
+}
+
+#brand {
+    font-size: 5rem;
+}
+
+li a {
+    font-size: 2rem;
+    margin-right: 3rem;
+}
+
+ul{
+    margin-left: 2rem;
+}
+
+#menu {
+    position: static;
 }
