@@ -28,15 +28,12 @@ button {
 	font-family: 'Amatic SC', cursive;
 }
 
-#track:hover, #setup:hover, #submit:hover, #pet:hover, #stopTracking:hover{
+#menu button:hover {
 	border-bottom: 2px solid #89CFFF;
 	color: #89CFFF !important;
 }
 
-button a:hover {
-	color: #89CFFF !important;
-	text-decoration: none;
-}
+
 
 
 #home {
