@@ -44,7 +44,7 @@ var tracking_data = []; //Hold all the GPS Locations within the array
 $("#submit, #track").on("click", function() {
 
   //Start tracking the dog
-  dogGeoId = navigator.geolocation.watchPosition(
+  dogGeoId = navigator.geolocation.getCurrentPosition(
 
     //Position
     function(position) {
@@ -105,6 +105,7 @@ $("#localStorage").on("click", function(){
 
 
 //Create the Dog Button off the user input [THINK ABOUT THIS ONE]
+
 
 //When the user clicks a link to view track info, set/change the dogName attribute on the tracking info page.
 $("#track").on("click", function() {
