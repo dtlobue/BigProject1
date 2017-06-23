@@ -100,11 +100,30 @@ $("#localStorage").on("click", function(){
   /* Talk this over with James */
 });
 
-
-//Maybe create history page of where the dog has gone
-
+var trackerId = [];
+var newPetName = [];
 
 //Create the Dog Button off the user input [THINK ABOUT THIS ONE]
+$("#enter").on("click", function(){
+  //Creating a new pet button
+  var newPetButton = ("#extraPets").val();
+
+  var newButton = $("<button/>").addClass( "btn btn-info newPetName").attr('data-name',newPetButton).html(newPetButton).css({'margin': '5px'});
+
+  $("myPetButtons").append(newButton);
+  console.log()
+
+  queryURL = ""
+
+  $.ajax({
+    url: queryURL
+    method: "GET"
+  })
+
+});
+
+}
+
 
 
 //When the user clicks a link to view track info, set/change the dogName attribute on the tracking info page.
