@@ -43,8 +43,6 @@ button {
 }
 
 #menu button a {
-	padding-right: 10rem;
-	padding-left: 10rem;
 }
 
 #home {
@@ -92,7 +90,8 @@ a h2 {
 
 li a {
 	font-size: 2rem;
-	margin-right: 3rem;
+	margin-right: 2rem;
+	margin-left: 2rem;
 }
 
 ul{
