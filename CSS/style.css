@@ -37,8 +37,15 @@ button {
 	color: #89CFFF !important;
 }
 
+#menu button a:hover {
+	text-decoration: none;
+	color: #89CFFF !important;
+}
 
-
+#menu button a {
+	padding-right: 10rem;
+	padding-left: 10rem;
+}
 
 #home {
 	color: rgba(0,0,0,.9);
