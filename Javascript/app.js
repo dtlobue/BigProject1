@@ -96,33 +96,35 @@ $("#stopTracking").on("click", function(){ /**figure out what ID goes here**/
 $("#localStorage").on("click", function(){
   window.localStorage.clear();
 
-  /* Can add a local storage button and just clear it*/
+/* Can add a local storage button and just clear it*/
+
   /* Talk this over with James */
 });
 
-var trackerId = [];
-var newPetName = [];
+
+var trackerId = []; /**Storing the pet id**/
+var newPetName = []; /**Store the pet name off **/
 
 //Create the Dog Button off the user input [THINK ABOUT THIS ONE]
 $("#enter").on("click", function(){
   //Creating a new pet button
-  var newPetButton = ("#extraPets").val();
+  var newPetButton = ("#extraPets").val(" ");
 
   var newButton = $("<button/>").addClass( "btn btn-info newPetName").attr('data-name',newPetButton).html(newPetButton).css({'margin': '5px'});
 
+  //Create a new button for a new pet the user has entered
   $("myPetButtons").append(newButton);
   console.log()
 
-  queryURL = ""
+  queryURL = "http://api.petfinder.com/my.method&pet.find" + newPetButton + "?key26fe4d75647f8cc15895ba375d993ed1=foo"; /**Gotta fix this (need to find better documentation)**/
 
+  //AJAX call to grab from Pet Finder
   $.ajax({
-    url: queryURL
-    method: "GET"
+    url: queryURL,
+    method: 'GET'
   })
 
 });
-
-}
 
 
 
