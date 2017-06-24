@@ -104,6 +104,56 @@ $("#localStorage").on('click', function(){
 	window.localStorage.setItem('Sample block', '[{"timestamp":1335700802000,"coords":{"heading":null,"altitude":null,"longitude":170.33488333333335,"accuracy":0,"latitude":-45.87475166666666,"speed":null,"altitudeAccuracy":null}]');
 });
 
+//Giphy API AJAX Call Begins
+
+//GLobal Scope THings (Variables)
+
+//var APIKey = "4b5a7da88d694ef2aea74e4bef626d01";
+  var APIKey = "&api_key=dc6zaTOxFJmzC";
+//Come back to this and add to it to complete
+//var queryURL = "https://api.giphy.com/v1/gifs/search?q=";
+
+
+//Clicking on a button makes it go to the Giphy API and pull a Giphy of a dog:
+// So, an on.click event. Make sure to include $(this) in it, which makes sure only the button clicked sends
+// it's VALUE to Giphy API.
+
+//Select element with necessary ID (the button) and add on click event
+// (Still need to actually make element with ID)
+$("#hereIsADog").on("click", function(event) {
+
+  //Constructing a QueryURL using the dunker name
+  //(come back to this, might need to be changed)
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + "dog" + APIKey + "&limit1";
+  //AJAX GET request:
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+  //Data should now be back from request
+  .done(function(response) {
+    //console log
+    console.log(response);
+    //creating and storing a div tag to be used below
+    var dogDiv = $("<div>");
+    //Storing response data in a variable for easier use
+    var dogResults = response.data;
+    //Creating and storing an image tag
+    var dogImage = $("<img>");
+    // Setting the src attribute of the image to a property pulled off the result item
+    dogImage.attr("src", dogResults[8].images.fixed_height.url);
+    //appending the image tag to an element on one of the pages (decide where!!)
+    dogDiv.append(dogImage);
+    //prepending the dogDiv to the div with ID "menu"
+    $("#menu").prepend(dogDiv);
+
+
+  })
+})
+
+//Giphy API AJAX call ends
+
+
 
 
 
@@ -123,11 +173,11 @@ $("#enter").on("click", function(){
   $("myPetButtons").append(newButton);
   console.log()
 
-  queryURL = "http://api.petfinder.com/my.method&pet.find" + newPetButton + "?key26fe4d75647f8cc15895ba375d993ed1=foo"; /**Gotta fix this (need to find better documentation)**/
+  pqueryURL = "http://api.petfinder.com/my.method&pet.find" + newPetButton + "?key26fe4d75647f8cc15895ba375d993ed1=foo"; /**Gotta fix this (need to find better documentation)**/
 
   //AJAX call to grab from Pet Finder
   $.ajax({
-    url: queryURL,
+    url: pqueryURL,
     method: 'GET'
   })
 

@@ -2,6 +2,10 @@
 	font-family: 'Amatic SC', cursive;
 }
 
+#hereIsADog {
+	margin-top: 10px;
+}
+
 #map{
 	height: 400px;
 	width:100%;
