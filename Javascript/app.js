@@ -92,6 +92,7 @@ $("#stopTracking").on("click", function(){ /**figure out what ID goes here**/
 });
 
 
+/******LOCAL STORAGE AREA*********/
 //Clearing the local storage
 $("#localStorage").on("click", function(){
   window.localStorage.clear();
@@ -103,7 +104,7 @@ $("#localStorage").on('click', function(){
 	window.localStorage.setItem('Sample block', '[{"timestamp":1335700802000,"coords":{"heading":null,"altitude":null,"longitude":170.33488333333335,"accuracy":0,"latitude":-45.87475166666666,"speed":null,"altitudeAccuracy":null}]');
 });
 
-  /* Talk this over with James */
+
 
 
 
