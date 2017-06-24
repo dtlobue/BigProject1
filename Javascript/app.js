@@ -96,11 +96,15 @@ $("#stopTracking").on("click", function(){ /**figure out what ID goes here**/
 $("#localStorage").on("click", function(){
   window.localStorage.clear();
 
-/**Can add a local storage button and just clear it**/
+});
 
+/**Can add a local storage button and just clear it**/
+$("#localStorage").on('click', function(){
+	window.localStorage.setItem('Sample block', '[{"timestamp":1335700802000,"coords":{"heading":null,"altitude":null,"longitude":170.33488333333335,"accuracy":0,"latitude":-45.87475166666666,"speed":null,"altitudeAccuracy":null}]');
+});
 
   /* Talk this over with James */
-});
+
 
 
 // Gotta Fix This! (NOT WORKING CURRENTLY BUT NO ERROR)
