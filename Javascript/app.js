@@ -136,14 +136,20 @@ $("#hereIsADog").on("click", function(event) {
     console.log(response);
     //creating and storing a div tag to be used below
     var dogDiv = $("<div>");
+
     //Storing response data in a variable for easier use
     var dogResults = response.data;
     //Creating and storing an image tag
     var dogImage = $("<img>");
     // Setting the src attribute of the image to a property pulled off the result item
     dogImage.attr("src", dogResults[8].images.fixed_height.url);
+
+    dogImage.attr("id", "dogImg")
+
     //appending the image tag to an element on one of the pages (decide where!!)
     dogDiv.append(dogImage);
+
+    dogDiv.attr("id","dogGif");
     //prepending the dogDiv to the div with ID "menu"
     $("#menu").prepend(dogDiv);
 
