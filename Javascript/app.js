@@ -92,16 +92,18 @@ $("#stopTracking").on("click", function(){ /**figure out what ID goes here**/
 });
 
 
-//Possibly clear the local storage
+//Clearing the local storage
 $("#localStorage").on("click", function(){
   window.localStorage.clear();
 
-/* Can add a local storage button and just clear it*/
+/**Can add a local storage button and just clear it**/
+
 
   /* Talk this over with James */
 });
 
 
+// Gotta Fix This! (NOT WORKING CURRENTLY BUT NO ERROR)
 var trackerId = []; /**Storing the pet id**/
 var newPetName = []; /**Store the pet name off **/
 
